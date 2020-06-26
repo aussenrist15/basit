@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--  This is a custom layout that we will be using with the adapter  -->
+    <!--  We can decide what our list will look like after we display it with  -->
+    <!--  using the adapter.  -->
+
+
+
 
     <TextView
         android:id="@+id/textView1"

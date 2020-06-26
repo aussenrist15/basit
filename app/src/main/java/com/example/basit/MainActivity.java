@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         TextView phr = (TextView)findViewById(R.id.phrases);
 
 
-    //Adding event listeners
+        //Adding event listeners
+        //for each of the buttons
+
         col.setOnClickListener(new View.OnClickListener(){
 
             @Override
