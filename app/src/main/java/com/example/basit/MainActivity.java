@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         TextView col = (TextView)findViewById(R.id.colors);
         TextView fam = (TextView)findViewById(R.id.family);
         TextView num = (TextView)findViewById(R.id.numbers);
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view){
+
                 Intent intent = new Intent(MainActivity.this, ColorsActivity.class);
                 startActivity(intent);
             }

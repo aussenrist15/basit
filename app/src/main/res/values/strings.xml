@@ -1,3 +1,6 @@
-<resources>
+<resources >
     <string name="app_name">Coffee Order</string>
+
+    <string name="color"> Colors </string>
+
 </resources>

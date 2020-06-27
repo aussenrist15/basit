@@ -6,7 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
@@ -17,10 +20,12 @@ import java.util.ArrayList;
 
 public class myAdapter extends ArrayAdapter<item> {
     ArrayList<item> List = new ArrayList<>();
+    private int mColorResourceId;
 
-    public myAdapter(Context context, int textViewResourceId, ArrayList<item> objects) {
+    public myAdapter(Context context, int textViewResourceId, ArrayList<item> objects, int colrRsrc) {
         super(context, textViewResourceId, objects);
         List = objects;
+        mColorResourceId = colrRsrc;
     }
 
     @Override
@@ -44,10 +49,24 @@ public class myAdapter extends ArrayAdapter<item> {
 
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         v = inflater.inflate(R.layout.custom_layout_double_text_view, null);
+        item current = getItem(position);
         TextView textView1 = (TextView)v.findViewById(R.id.textView1);
         TextView textView2 = (TextView)v.findViewById(R.id.textView2);
         textView1.setText(List.get(position).getText1());
         textView2.setText(List.get(position).getText2());
+        ImageView img = (ImageView)v.findViewById(R.id.imgView);
+        if(current.hasImg()){
+            img.setImageResource(current.getImgRes());
+            img.setVisibility(View.VISIBLE);
+
+        }
+        else {
+            img.setVisibility(View.GONE);
+        }
+        View textConnt = v.findViewById(R.id.textContainer);
+        int color = ContextCompat.getColor(getContext(), mColorResourceId);
+        textConnt.setBackgroundColor(color);
+
         return v;
 
     }

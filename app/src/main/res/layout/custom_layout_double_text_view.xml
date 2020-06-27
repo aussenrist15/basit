@@ -2,24 +2,46 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <!--  This is a custom layout that we will be using with the adapter  -->
     <!--  We can decide what our list will look like after we display it with  -->
     <!--  using the adapter.  -->
 
 
+    <ImageView
 
+
+        android:src="@drawable/color_brown"
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:background="@color/categoryColors"
+        android:id="@+id/textContainer"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView1"
+        android:paddingLeft="10dp"
+        android:paddingTop="16dp"
+        android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"/>
 
     <TextView
+        android:paddingLeft="10dp"
         android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </LinearLayout>

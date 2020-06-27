@@ -28,7 +28,7 @@ public class PhrasesActivity extends AppCompatActivity {
         words.add(new item("әnni'nem",  "Come here"));
 
 
-        myAdapter items = new myAdapter(this, R.layout.custom_layout_double_text_view, words);
+        myAdapter items = new myAdapter(this, R.layout.custom_layout_double_text_view, words, R.color.catgoryPhrases);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(items);
 
