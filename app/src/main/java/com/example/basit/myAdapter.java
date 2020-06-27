@@ -14,9 +14,37 @@ import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 
 /*
-* This is a custom adapter to display two TextViews in the ListView.
-* This was coded by @aussenrist15 (Abdul Basit)
- */
+*
+* This is a custom adapter to display two TextViews and an ImageView in
+* the list.
+*
+*/
+
+
+    // The ArrayAdapter class is a default class that is provided by Java to display the items of
+    // an Array or an ArrayList on the screen in form of a List that can scroll down.
+
+    /******************************
+
+        How ArrayAdapter Works
+
+     *****************************/
+
+    // The array adapter uses a layout and a ListView to display item.
+    //  ArrayAdapter<T> obj = new ArrayAdapter <T> (context , layout , Obj[] )
+    // @param ::
+    // context : The context of application. Usually we pass "this" as the context
+    // layout : The layout in which we want to present data. The default layout provided by
+    //android contains only one single text view.
+    // Obj[] : The array of objects we want to print. In case of default layout we can only use String
+    //because default layout has only single text view and cant print more than one item per list-item
+
+
+    // So below is the creation of a custom adapter. We have created a custom layout XML file
+    // to check the custom layout, see { custom_layout_double_text_view.xml } file. It contains 2 text views
+    // and 1 image views
+    // We need to give each view an Id so that we can refer to them here
+
 
 public class myAdapter extends ArrayAdapter<item> {
     ArrayList<item> List = new ArrayList<>();
@@ -30,7 +58,7 @@ public class myAdapter extends ArrayAdapter<item> {
 
     @Override
     public int getCount() {
-        return super.getCount();
+        return super.getCount(); // This code is auto generated. No need to remember this
     }
 
     @SuppressLint("ViewHolder")
