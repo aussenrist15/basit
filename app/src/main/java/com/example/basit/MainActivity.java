@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
+                // To go to another screen
+
                 Intent intent = new Intent(MainActivity.this, ColorsActivity.class);
                 startActivity(intent);
             }
