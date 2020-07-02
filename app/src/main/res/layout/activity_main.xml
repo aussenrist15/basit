@@ -9,81 +9,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text= "@string/color"
-        android:textSize="50dp"
-        android:textColor="@android:color/white"
-        android:background="@color/categoryColors"
-        android:id="@+id/colors"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:layout_margin="8dp"
-        android:padding="10dp"
-        android:paddingLeft="16dp"
-        />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Family"
-        android:textSize="50dp"
-        android:textColor="@android:color/white"
-        android:background="@color/categoryFamily"
-        android:id="@+id/family"
-        android:focusable="true"
-        android:padding="8dp"
 
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:paddingLeft="16dp"
+    <androidx.viewpager.widget.ViewPager
 
-        />
-
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Numbers"
-        android:textSize="50dp"
-        android:textColor="@android:color/white"
-        android:background="@color/categoryNumbers"
-        android:padding="10dp"
-
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:id="@+id/numbers"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:paddingLeft="16dp"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Phrases"
-        android:textSize="50dp"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
-        android:textColor="@android:color/white"
-        android:padding="10dp"
-
-        android:background="@color/catgoryPhrases"
-        android:id="@+id/phrases"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:paddingLeft="16dp"
-        />
-
+    android:id="@+id/viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
 
 
 

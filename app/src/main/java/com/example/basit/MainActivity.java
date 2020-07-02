@@ -1,6 +1,8 @@
 package com.example.basit;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +15,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+
+
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,57 +27,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
-        TextView col = (TextView)findViewById(R.id.colors);
-        TextView fam = (TextView)findViewById(R.id.family);
-        TextView num = (TextView)findViewById(R.id.numbers);
-        TextView phr = (TextView)findViewById(R.id.phrases);
-
-
-        //Adding event listeners
-        //for each of the buttons
-
-        col.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-
-                // To go to another screen
-
-                Intent intent = new Intent(MainActivity.this, ColorsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        fam.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, FamilyActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        num.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, NumbersActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        phr.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this, PhrasesActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        ViewPager vp = (ViewPager) findViewById(R.id.viewpager) ;
+        myFragmentAdapter ad= new myFragmentAdapter(getSupportFragmentManager() , FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        vp.setAdapter(ad);
 
     }
 
